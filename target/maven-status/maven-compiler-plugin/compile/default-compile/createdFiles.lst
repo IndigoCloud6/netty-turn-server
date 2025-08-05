@@ -8,6 +8,7 @@ com/example/turnserver/repository/AllocationRepository.class
 com/example/turnserver/model/User.class
 com/example/turnserver/TurnServerApplication.class
 com/example/turnserver/service/StatisticsService.class
+com/example/turnserver/config/SQLiteConfig.class
 com/example/turnserver/controller/TurnController.class
 com/example/turnserver/handler/TurnServerHandler.class
 com/example/turnserver/model/TurnSession.class
@@ -21,6 +22,7 @@ com/example/turnserver/handler/StunMessageHandler.class
 com/example/turnserver/util/CryptoUtils.class
 com/example/turnserver/dto/UserCreateRequest.class
 com/example/turnserver/repository/TurnSessionRepository.class
+com/example/turnserver/service/DatabaseInitializationService.class
 com/example/turnserver/dto/StatisticsResponse.class
 com/example/turnserver/model/Allocation.class
 com/example/turnserver/config/SecurityConfig.class
