@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: netty-turn-server
+  datasource:
+    url: jdbc:sqlite:turn_server.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    user:
+      name: admin
+      password: admin123
+turn:
+  server:
+    port: 3478
+    realm: "turn.example.com"
+    secret: "myTurnSecret123"
+    external-ip: "127.0.0.1"
+    min-port: 49152
+    max-port: 65535
+stun:
+  server:
+    port: 3478
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    com.example.turnserver: DEBUG
+    io.netty: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
