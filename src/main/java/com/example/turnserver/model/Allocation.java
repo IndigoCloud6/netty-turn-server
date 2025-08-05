@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Table(name = "allocations", indexes = {
-    @Index(name = "idx_allocation_id", columnList = "allocationId", unique = true),
-    @Index(name = "idx_session_id", columnList = "sessionId"),
-    @Index(name = "idx_relay_address", columnList = "relayAddress")
+    @Index(name = "idx_allocation_id", columnList = "allocation_id", unique = true),
+    @Index(name = "idx_session_id", columnList = "session_id"),
+    @Index(name = "idx_relay_address", columnList = "relay_address")
 })
 public class Allocation {
     
